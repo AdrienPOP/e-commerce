@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,26 +10,31 @@
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
-<title>Ap-Shop</title>
+<title>Ap-Shop Login</title>
 </head>
 <body>
 	<%@ include file="header.jsp"%>
 		<div id="bannerForm" class="col-8">
-			<form:form servletRelativeAction="/addCategory"
-				modelAttribute="category" acceptCharset="utf-8" class="col-8">
-				<h2>Ajoutez une catégorie</h2>
-				<div>
-					<label for ="name" class="col-12">Name</label>
-					<form:input path="name"></form:input>
+			<form action="" method="POST" class="col-8">
+				<div class="col-12">
+					<label class="col-12" for="login">Identifiant</label> <input
+						type="text" name="login" id="login" required>
 				</div>
-				<div>
-					<label for="description" class="col-12">Description</label>
-					<form:input path="description"></form:input>
+				<div class="col-12">
+					<label class="col-12" for="password">Mot de passe</label> <input
+						type="password" name="password" id="password" required>
 				</div>
+
 				<div id="btn_submit" class="col-12">
-					<button class="col-6" type="submit">Ajouter une catégorie</button>
+					<button class="col-6" type="submit">Se connecter</button>
 				</div>
-			</form:form>
+				<div class="col-8 mdp">
+					<a id="newAccount"
+						href=""
+						class="col-6">Créer un compte</a>
+					<a href="#" class="col-6">Mot de passe oublié</a>
+				</div>
+			</form>
 		</div>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/js/script.js"></script>
 </body>

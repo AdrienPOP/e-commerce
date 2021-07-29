@@ -1,10 +1,12 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page import="com.ap_commerce.engine.entities.Category" %>
 
 <header class="col-12">
 	<div id="navSticky" class="col-12">
 		<ul class="col-12 col-lg-7">
 			<li><a href="">Localisez le magasin</a></li>
 			<li><a href="">Mon Compte</a></li>
-			<li><a href="">S'identifier</a></li>
+			<li><a href="login">S'identifier</a></li>
 		</ul>
 	</div>
 	<div id="banner" class="col-12">
@@ -12,21 +14,14 @@
 			<h1>Ap-Shop</h1>
 			<h2>Vêtements & équipement outdoor</h2>
 		</div>
-		<div id="form" class="col-12 col-lg-6">
-			<form action="">
-				<label for="category" hidden></label> <select name="category"
-					id="cat">
+			<form method>
+				<label for="" hidden></label>
+				<select>
 					<option value="allCategory">Toutes les catégories</option>
-					<option value="category1">Catégorie 1</option>
-					<option value="category2">Catégorie 2</option>
-					<option value="category3">Catégorie 3</option>
-					<option value="category4">Catégorie 4</option>
-					<option value="category5">Catégorie 5</option>
-
+					<c:forEach items="${categories}" var="cat">
+						<option value="${cat.id }">${cat.name}</option>
+					</c:forEach>
 				</select>
-				<div>
-					<input type="search">
-				</div>
 				<div>
 					<button type="submit">Cherchez</button>
 				</div>
@@ -40,7 +35,8 @@
 						Catégories</a></li>
 			</ul>
 			<ul class="col-6">
-				<li><a href="">Accueil</a></li>
+		
+				<li><a href="home">Accueil</a></li>
 				<li><a href="">Produits</a></li>
 				<li><a href="">Offre du moment</a></li>
 				<li><a href="">Contactez-nous</a></li>
@@ -51,11 +47,9 @@
 		<div id="menuCategory" class="col-lg-12">
 			<nav class="col-12">
 				<ul>
-					<li class="col-12"><a href="">Catégorie 1</a></li>
-					<li class="col-12"><a href="">Catégorie 2</a></li>
-					<li class="col-12"><a href="">Catégorie 3</a></li>
-					<li class="col-12"><a href="">Catégorie 4</a></li>
-					<li class="col-12"><a href="">Catégorie 5</a></li>
+					<c:forEach items="${categories}" var="cat">
+						<li class="col-12"><a href="category?category=${cat.id}">${cat.name}</a></li>
+					</c:forEach>
 				</ul>
 			</nav>
 		</div>

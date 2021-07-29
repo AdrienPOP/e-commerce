@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page import="com.ap_commerce.engine.entities.Category" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
@@ -11,27 +14,18 @@
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
-<title>Ap-Shop</title>
+<title>Ap-Shop Articles</title>
 </head>
 <body>
 	<%@ include file="header.jsp"%>
-		<div id="bannerForm" class="col-8">
-			<form:form servletRelativeAction="/addCategory"
-				modelAttribute="category" acceptCharset="utf-8" class="col-8">
-				<h2>Ajoutez une catégorie</h2>
-				<div>
-					<label for ="name" class="col-12">Name</label>
-					<form:input path="name"></form:input>
-				</div>
-				<div>
-					<label for="description" class="col-12">Description</label>
-					<form:input path="description"></form:input>
-				</div>
-				<div id="btn_submit" class="col-12">
-					<button class="col-6" type="submit">Ajouter une catégorie</button>
-				</div>
-			</form:form>
-		</div>
+	<div>
+		<c:forEach items="${articles}" var="article">
+			<div>
+				<h3>${article.name}</h3>
+				<p>${article.description}</p>
+			</div>
+		</c:forEach>
+	</div>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/js/script.js"></script>
 </body>
 </html>

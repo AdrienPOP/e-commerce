@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 import org.springframework.stereotype.Component;
@@ -22,10 +23,12 @@ public class Category {
 	
 	@Column(nullable=false)
 	private String name;
+	
 	@Column
 	private String description;
 
-	@OneToMany (targetEntity=Article.class)
+	@OneToMany(targetEntity=Article.class)
+	@JoinColumn(name="category_id", referencedColumnName="id")
 	private List<Article> article;
 	
 	
@@ -70,6 +73,13 @@ public class Category {
 	public void setArticle(ArrayList<Article> article) {
 		this.article = article;
 	}
+
+	@Override
+	public String toString() {
+		return "Category [id=" + id + ", name=" + name + ", description=" + description + ", article=" + article + "]";
+	}
+	
+	
 	
 	
 	

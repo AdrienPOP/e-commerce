@@ -145,11 +145,64 @@ header{
 	background-color : rgba(255, 255, 255, 0.8);
 	width : 90%;
 	margin : auto;
+	min-height: 80vh;
 }
-#bannerapp form {
+#bannerForm {
 	margin: auto;
-	background-color : rgb(151, 151, 151);
-	width : 40%;
+	display : flex;
+	flex-wrap : wrap;
+	align-items: center;
+	justify-content: center;
+}
+#bannerForm h2 {
+	text-align: center;
+	color: rgb(0, 118, 214);
+}
+#bannerForm form {
+	border-radius : 20px;
+	margin: 10% auto;
+	background: #2b2b2b;
+}
+#bannerForm div {
+	display : flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+#bannerForm label{
+	text-align : center;
+	color: rgb(0, 118, 214);
+	margin-bottom: 1%;
+}
+#bannerForm a {
+	text-align: center;
+	text-decoration: none;
+	color: rgb(0, 118, 214);
+	box-shadow: inset 7px 7px 23px #181818,
+                inset -7px -7px 23px #5c5c5c;
+}
+#bannerForm a:hover {
+	box-shadow: inset 7px 7px 23px #333333,
+    			inset -7px -7px 23px #807f7f;
+    color: orange;
+}
+#btn_submit{
+	margin : 2% 0;	
+}
+#btn_submit button{
+	border : none;
+	background-color: #2b2b2b;
+	color: rgb(0, 118, 214);
+	box-shadow: inset 7px 7px 23px #181818,
+                inset -7px -7px 23px #5c5c5c;
+}
+#btn_submit button:hover{	
+	box-shadow: inset 7px 7px 23px #333333,
+    			inset -7px -7px 23px #807f7f;
+    color: orange;
+}
+#bannerForm .mdp{
+	margin :2% auto;
+
 }
 
 @media screen and (min-width:980px) {

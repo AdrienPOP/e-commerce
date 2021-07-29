@@ -11,34 +11,36 @@
 	rel="stylesheet"
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 <title>Ap-Shop</title>
 </head>
 <body>
 	<%@ include file="header.jsp"%>
-	<div id="bannerapp">
+	<div id="bannerForm" class="col-8">
 		<form:form servletRelativeAction="/addArticle"
-			modelAttribute="article" acceptCharset="utf-8">
+			modelAttribute="article" acceptCharset="utf-8" class="col-8">
 			<h2>Ajoutez un article</h2>
-			<p>
-				<label>Name</label>
+			<div>
+				<label for="name" class="col-12">Name</label>
 				<form:input path="name"></form:input>
-			</p>
-			<p>
-				<label>Description</label>
+			</div>
+			<div>
+				<label for="description" class="col-12">Description</label>
 				<form:input path="description"></form:input>
-			</p>
-			<p>
-				<label>Formation</label>
+			</div>
+			<div>
+				<label for="category" class="col-12">Catégorie</label>
 				<form:select path="category">
 					<form:option value="" label="--Selectionnez votre catégorie--"></form:option>
 					<form:options items="${categories}" itemValue="id" itemLabel="name"></form:options>
 				</form:select>
-			</p>
+			</div>
 
-			<button type="submit">Créer l'article</button>
+			<div id="btn_submit" class="col-12">
+				<button class="col-6" type="submit">Ajouter un article</button>
+			</div>
 		</form:form>
 	</div>
-	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/script.js"></script>
 </body>
 </html>

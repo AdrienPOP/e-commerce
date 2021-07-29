@@ -78,6 +78,14 @@ public class Article {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
+
+	@Override
+	public String toString() {
+		return "Article [id=" + id + ", name=" + name + ", description=" + description + ", price=" + price
+				+ ", category=" + category + "]";
+	}
+	
+	
 	
 	
 	

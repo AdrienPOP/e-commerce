@@ -27,13 +27,5 @@ public class HomeController {
 		model.addAttribute("categories",categories);
 		return "home";
 	}
-	@GetMapping("/login")
-	public String showFormLogin(Model model) {
-		List <Category> categories = categoryRepository.findAll();
-		model.addAttribute("categories",categories);
-		return "login";
-	}
-	
-	
-	
+
 }

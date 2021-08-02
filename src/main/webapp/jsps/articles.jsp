@@ -18,14 +18,21 @@
 </head>
 <body>
 	<%@ include file="header.jsp"%>
-	<div>
-		<c:forEach items="${articles}" var="article">
-			<div>
-				<h3>${article.name}</h3>
-				<p>${article.description}</p>
-			</div>
-		</c:forEach>
+	<div id="bannerapp" class="col-12">
+		<div id="bannerArt">
+			<c:forEach items="${articles}" var="article">
+				<div class="art col-3">
+					<h3>${article.name}</h3>
+					<img alt="" src="https://via.placeholder.com/300x200">
+					<div class="btn_art col-12">
+						<a class="col-4 addArtOnCarts" href="?${article.id}">Ajouter au panier</a>
+						<a class="col-4">Voir le produit</a>
+					</div>
+				</div>
+			</c:forEach>
+		</div>
 	</div>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/js/script.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/addCart.js"></script>
 </body>
 </html>

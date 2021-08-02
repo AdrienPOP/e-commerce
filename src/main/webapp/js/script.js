@@ -20,5 +20,4 @@ function clickCategory(){
 		});	
 	}
 }
-
-clickCategory();
+clickCategory(); 

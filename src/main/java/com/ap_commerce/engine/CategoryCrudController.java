@@ -10,7 +10,7 @@ import com.ap_commerce.engine.entities.Category;
 import com.ap_commerce.engine.repositories.CategoryRepository;
 
 @Controller
-public class CategoryController {
+public class CategoryCrudController {
 	
 	@Autowired
 	private CategoryRepository categorieRepository;

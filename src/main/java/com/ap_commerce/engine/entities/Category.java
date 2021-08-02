@@ -27,9 +27,10 @@ public class Category {
 	@Column
 	private String description;
 
-	@OneToMany(targetEntity=Article.class)
+	@Column
+	@OneToMany
 	@JoinColumn(name="category_id", referencedColumnName="id")
-	private List<Article> article;
+	private List<Article> article = new ArrayList<Article>();
 	
 	
 	public Category() {

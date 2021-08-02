@@ -1,7 +1,12 @@
 @charset "UTF-8";
 
-/* ------Header----- */
+/*--------------- 
+------Header-----
+----------------- */
+
 body{
+	position: fixed;
+	width: 100%;
 	background: fixed center no-repeat url("../ressources/bg.jpg");
 }
 #bannerimg {
@@ -39,6 +44,10 @@ header{
 }
 #logo h1 {
     color : rgb(0, 118, 214);
+}
+#logo h1 a{
+	text-decoration: none;
+	color : rgb(0, 118, 214);
 }
 
 #logo h2{
@@ -141,11 +150,62 @@ header{
 	box-shadow : 1px 1px 1px 1px black;
 }
 
+
+/*-------------- 
+-------App------
+---------------- */
+
 #bannerapp{
-	background-color : rgba(255, 255, 255, 0.8);
-	width : 90%;
+	height: 80vh;
+	overflow-y : scroll;
+}
+#bannerArt{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+#bannerArt .art{
+	margin : 2%;
+	border-radius : 20px;
+	background: linear-gradient(145deg, #272727, #2e2e2e);
+	box-shadow:  2px 2px 2px #252525,
+             	-2px -2px 2px #313131;
+}
+#bannerArt .art h3{
+	color : rgb(0, 118, 214);
+	text-align: center;
+}
+#bannerArt img{
+	display: block;
+	margin: auto;	
+}
+#bannerArt .art p{
+	border-radius: 8px;
+	margin : 4% auto;
+	background-color: rgba(255, 255, 255, 0.6);
+	text-align: center;
+	width : 80%;
+}
+#bannerArt .btn_art{
+	display : flex;
+	justify-content : center;
+	margin : 4% 0;
+	padding : 2% 0;
+}
+#bannerArt .art a{
 	margin : auto;
-	min-height: 80vh;
+	text-align : center;
+	text-decoration: none;
+	color : rgb(0, 118, 214);
+	border-radius: 8px;
+	padding: 2%;
+    background: #2b2b2b;
+    box-shadow: inset 7px 7px 23px #181818,
+                inset -7px -7px 23px #5c5c5c;
+}
+#bannerArt .art a:hover{
+	color : orange;
+	box-shadow : 1px 1px 1px 1px black;
 }
 #bannerForm {
 	margin: auto;
@@ -202,7 +262,6 @@ header{
 }
 #bannerForm .mdp{
 	margin :2% auto;
-
 }
 
 @media screen and (min-width:980px) {

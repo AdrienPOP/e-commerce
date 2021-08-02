@@ -11,7 +11,7 @@
 	</div>
 	<div id="banner" class="col-12">
 		<div id="logo" class="col-12 col-lg-2">
-			<h1>Ap-Shop</h1>
+			<h1><a href="home">Ap-Shop</a></h1>
 			<h2>Vêtements & équipement outdoor</h2>
 		</div>
 			<form method>

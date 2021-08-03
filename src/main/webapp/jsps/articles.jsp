@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page import="com.ap_commerce.engine.entities.Category" %>
+<%@ page import="com.ap_commerce.engine.entities.Category"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
@@ -13,7 +13,8 @@
 	rel="stylesheet"
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/style.css">
 <title>Ap-Shop Articles</title>
 </head>
 <body>
@@ -25,14 +26,23 @@
 					<h3>${article.name}</h3>
 					<img alt="" src="https://via.placeholder.com/300x200">
 					<div class="btn_art col-12">
-						<a class="col-4 addArtOnCarts" href="?${article.id}">Ajouter au panier</a>
-						<a class="col-4">Voir le produit</a>
+						<a class="col-4 addArtOnCarts" href="?${article.id}">Ajouter
+							au panier</a> <a class="col-4">Voir le produit</a>
 					</div>
 				</div>
 			</c:forEach>
 		</div>
+		<div id="modalWindowSucess" class="col-4">
+			<h2>Vous avez ajouté avec succès l'article suivant :</h2>
+			<div id="articleAddInCart" class="col-12">
+				
+				
+			</div>
+		</div>
 	</div>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/script.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/addCart.js"></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/js/script.js"></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/js/addCart.js"></script>
 </body>
 </html>

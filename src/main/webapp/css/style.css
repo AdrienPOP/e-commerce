@@ -207,6 +207,41 @@ header{
 	color : orange;
 	box-shadow : 1px 1px 1px 1px black;
 }
+#modalWindowSucess{
+	display : none;
+	background-color: rgb(43, 43, 43);
+	flex-wrap: wrap;
+	position : fixed;
+	top : 25%;
+	left : 33%;
+}
+
+#modalWindowSucess img{
+	display: block;
+	margin: auto;	
+}
+#modalWindowSucess h2{
+	margin: 2% auto;
+	font-size: 1.5em;	
+	color : rgb(0, 118, 214);
+}
+#modalWindowSucess h3{
+	text-align : center;
+	font-size: 1.5em;	
+	color : rgb(0, 118, 214);
+}
+#modalWindowSucess div div:last-child {
+	display: flex;
+}
+#modalWindowSucess a{
+	margin : auto;
+	text-decoration : none;
+	color : rgb(0, 118, 214);
+	font-size : 2em;
+}
+#modalWindowSucess a:hover{
+	color : orange;	
+}
 #bannerForm {
 	margin: auto;
 	display : flex;

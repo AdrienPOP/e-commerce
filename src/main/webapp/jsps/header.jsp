@@ -4,7 +4,7 @@
 <header class="col-12">
 	<div id="navSticky" class="col-12">
 		<ul class="col-12 col-lg-7">
-			<li><a href="">Localisez le magasin</a></li>
+			<li><a href="Cart">Mon panier</a></li>
 			<li><a href="">Mon Compte</a></li>
 			<li><a href="login">S'identifier</a></li>
 		</ul>

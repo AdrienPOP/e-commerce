@@ -32,15 +32,37 @@ function sendRequest(method, url, action, parameter = "") {
 	};
 };
 
+let openModalWindowSuccess = (jsonString) => {
+	let article = JSON.parse(jsonString);
+	console.log(article);
+	let html = "";
+	html += "<h3>" + article.name + "</h3>" + '<img alt="" src="https://via.placeholder.com/300x200">' + '<div class="col-12"><a id="btnClose" href="#">&#10007</a></div>';
+	
+	document.getElementById("modalWindowSucess").style.display="flex";
+	document.getElementById("articleAddInCart").innerHTML = html;
+	closeModalWindowSuccess();
+}
+
+function closeModalWindowSuccess(){
+	let btnClose = document.getElementById("btnClose");
+	btnClose.addEventListener("click", (e) => {
+		document.getElementById("modalWindowSucess").style.display="none";
+	});
+}
+
 function clickToCart(){
 	let arts = document.getElementsByClassName("addArtOnCarts");
 	
 	for (let art of arts){
 		art.addEventListener("click", (e) => {
 			e.preventDefault();
-			console.log(art.search.substring(1));
+			sendRequest("GET", "addArticleOnCart?idArticle=" + art.search.substring(1), openModalWindowSuccess);  
 		})
 	}
+}
+
+function test() {
+	console.log("test  réussi");
 }
 
 clickToCart();

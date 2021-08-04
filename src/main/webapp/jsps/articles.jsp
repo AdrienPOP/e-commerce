@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ include file="tagLibs.jsp"%>
 <%@ page import="com.ap_commerce.engine.entities.Category"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +33,6 @@
 		<div id="modalWindowSucess" class="col-4">
 			<h2>Vous avez ajouté avec succès l'article suivant :</h2>
 			<div id="articleAddInCart" class="col-12">
-				
 				
 			</div>
 		</div>

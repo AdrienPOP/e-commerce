@@ -12,32 +12,32 @@
 	crossorigin="anonymous">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/style.css">
-<title>Ap-Shop Login</title>
+<title>Ap-Shop Register</title>
 </head>
 <body>
 	<%@ include file="header.jsp"%>
 	<div id="bannerForm" class="col-8">
-		<form:form servletRelativeAction="/login" modelAttribute="user"
+		<form:form servletRelativeAction="/registerUser" modelAttribute="user"
 			acceptCharset="utf-8" class="col-8">
 			<h2>Créer mon compte</h2>
 			<div>
 				<label for="username" class="col-12">Pseudo</label>
-				<form:input path="username" />
+				<form:input path="username"/>
 			</div>
 			<div>
 				<label for="password" class="col-12">Mot de passe</label>
-				<form:input path="password" type="password" />
+				<form:input path="password" type="password"/>
 			</div>
+			<div>
+				<label for="email" class="col-12">Email</label>
+				<form:input path="email"></form:input>
+			</div>
+
 			<div id="btn_submit" class="col-12">
-				<button class="col-6" type="submit">Se connecter</button>
-			</div>
-			<div class="col-8 mdp">
-				<a id="newAccount" href="register" class="col-6">Créer un compte</a>
-				<a href="#" class="col-6">Mot de passe oublié</a>
+				<button class="col-6" type="submit">Créer mon compte</button>
 			</div>
 		</form:form>
 	</div>
-	<script type="text/javascript"
-		src="${pageContext.request.contextPath}/js/script.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/script.js"></script>
 </body>
 </html>

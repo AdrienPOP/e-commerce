@@ -3,308 +3,382 @@
 /*--------------- 
 ------Header-----
 ----------------- */
-
-body{
+body {
 	position: fixed;
 	width: 100%;
 	background: fixed center no-repeat url("../ressources/bg.jpg");
 }
+
 #bannerimg {
-	height : 250vh;
+	height: 250vh;
 }
-header{
-    display : flex;
-    flex-wrap: wrap;
-}
-#navSticky{
-    background-color: hsl(0, 0%, 17%);
-    display: flex;
-    justify-content: flex-end;
-    height: 6vh;
 
+header {
+	display: flex;
+	flex-wrap: wrap;
 }
-#navSticky ul{
-    display : flex;
-    justify-content: flex-end;
-    align-items: center;
+
+#navSticky {
+	background-color: hsl(0, 0%, 17%);
+	display: flex;
+	justify-content: flex-end;
+	height: 6vh;
 }
-#navSticky ul li{
-    margin: 0 2%;
-    list-style-type: none;
+
+#navSticky ul {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
-#navSticky ul li a{
-    text-decoration: none;
-    color : rgb(0, 118, 214);
+
+#navSticky ul li {
+	margin: 0 2%;
+	list-style-type: none;
 }
-#navSticky ul li a:hover{
-    color : orange;
-}
-#logo{
-    margin-left: 2%;
-}
-#logo h1 {
-    color : rgb(0, 118, 214);
-}
-#logo h1 a{
+
+#navSticky ul li a {
 	text-decoration: none;
-	color : rgb(0, 118, 214);
+	color: rgb(0, 118, 214);
 }
 
-#logo h2{
-    color : rgb(0, 118, 214);
-    font-size: 1.2em;
+#navSticky ul li a:hover {
+	color: orange;
 }
 
-#banner{
-    display: flex;
-    flex-wrap : wrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(43, 43, 43);
-
+#navSticky button {
+	display: block;
+	border : none;
+	background-color: hsl(0, 0%, 17%);
+	height: 6vh;
+	color: rgb(0, 118, 214);
 }
-#banner form{
-    display: none;
-    justify-content: flex-end;
-    margin-right : 2%;
-}
-#navBar{
-    background-color: rgb(43, 43, 43);
-    display: flex;
-    justify-content: center;
-}
-#navBar nav{
-    display: none;
-}
-#navBar .firtA{
-    margin-left : 2%;
-    width: 100%;
-    /* font-size : 1.4em; */
-
-}
-#navBar nav ul{
-    height: 100%;
-    display: flex;
-    list-style-type: none;
-}
-#navBar nav ul li{
-    padding : 0;
-    width: 20%;
-}
-#navBar nav ul a{
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:  70%;    
-    margin : auto;
-    text-decoration: none;
-    text-align: center;
-    color : rgb(0, 118, 214);
-    border-radius: 8px;
-    background: #2b2b2b;
-    box-shadow: inset 7px 7px 23px #181818,
-                inset -7px -7px 23px #5c5c5c;
+#navSticky button:hover{
+	color: orange;
 }
 
-#navBar nav ul a:hover{
-    box-shadow: inset 7px 7px 23px #333333,
-    inset -7px -7px 23px #807f7f;
-    color: orange;
+#logo {
+	margin-left: 2%;
 }
 
-#categoryBar{
+#logo h1 {
+	color: rgb(0, 118, 214);
+}
+
+#logo h1 a {
+	text-decoration: none;
+	color: rgb(0, 118, 214);
+}
+
+#logo h2 {
+	color: rgb(0, 118, 214);
+	font-size: 1.2em;
+}
+
+#banner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgb(43, 43, 43);
+}
+
+#banner form {
+	display: none;
+	justify-content: flex-end;
+	margin-right: 2%;
+}
+
+#navBar {
+	background-color: rgb(43, 43, 43);
+	display: flex;
+	justify-content: center;
+}
+
+#navBar nav {
+	display: none;
+}
+
+#navBar .firtA {
+	margin-left: 2%;
+	width: 100%;
+	/* font-size : 1.4em; */
+}
+
+#navBar nav ul {
+	height: 100%;
+	display: flex;
+	list-style-type: none;
+}
+
+#navBar nav ul li {
+	padding: 0;
+	width: 20%;
+}
+
+#navBar nav ul a {
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70%;
+	margin: auto;
+	text-decoration: none;
+	text-align: center;
+	color: rgb(0, 118, 214);
+	border-radius: 8px;
+	background: #2b2b2b;
+	box-shadow: inset 7px 7px 23px #181818, inset -7px -7px 23px #5c5c5c;
+}
+
+#navBar nav ul a:hover {
+	box-shadow: inset 7px 7px 23px #333333, inset -7px -7px 23px #807f7f;
+	color: orange;
+}
+
+#categoryBar {
 	position: relative;
 	background-color: #2b2b2b;
 	top: 20%;
 	width: 15%;
 	border-radius: 0 0 10px 0;
 	background-color: #2b2b2b;
-	top : 20%;
-}
-#menuCategory {
-    display: none;
-    background-color: #2b2b2b;
-}
-#menuCategory ul {
-	padding : 0;
-}
-#menuCategory ul li{
-    list-style-type: none;
-    margin : 0;
-    padding : 0;
-    display : flex;
-    
-}
-#menuCategory nav ul a {
-	width : 100%;
-	margin : auto;
-	text-align : center;
-	text-decoration: none;
-	color : rgb(0, 118, 214);
-	border-bottom: 1px solid  orange;
-	padding : 3%;
-}
-#menuCategory nav ul a:hover {
-	color : orange;
-	box-shadow : 1px 1px 1px 1px black;
+	top: 20%;
 }
 
+#menuCategory {
+	display: none;
+	background-color: #2b2b2b;
+}
+
+#menuCategory ul {
+	padding: 0;
+}
+
+#menuCategory ul li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+#menuCategory nav ul a {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	text-decoration: none;
+	color: rgb(0, 118, 214);
+	border-bottom: 1px solid orange;
+	padding: 3%;
+}
+
+#menuCategory nav ul a:hover {
+	color: orange;
+	box-shadow: 1px 1px 1px 1px black;
+}
 
 /*-------------- 
 -------App------
 ---------------- */
-
-#bannerapp{
+#bannerapp {
 	height: 80vh;
-	overflow-y : scroll;
+	overflow-y: scroll;
 }
-#bannerArt{
+
+#bannerArt {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
-#bannerArt .art{
-	margin : 2%;
-	border-radius : 20px;
+
+#bannerArt .art {
+	margin: 2%;
+	border-radius: 20px;
 	background: linear-gradient(145deg, #272727, #2e2e2e);
-	box-shadow:  2px 2px 2px #252525,
-             	-2px -2px 2px #313131;
-}
-#bannerArt .art h3{
-	color : rgb(0, 118, 214);
-	text-align: center;
-}
-#bannerArt img{
-	display: block;
-	margin: auto;	
-}
-#bannerArt .art p{
-	border-radius: 8px;
-	margin : 4% auto;
-	background-color: rgba(255, 255, 255, 0.6);
-	text-align: center;
-	width : 80%;
-}
-#bannerArt .btn_art{
-	display : flex;
-	justify-content : center;
-	margin : 4% 0;
-	padding : 2% 0;
-}
-#bannerArt .art a{
-	margin : auto;
-	text-align : center;
-	text-decoration: none;
-	color : rgb(0, 118, 214);
-	border-radius: 8px;
-	padding: 2%;
-    background: #2b2b2b;
-    box-shadow: inset 7px 7px 23px #181818,
-                inset -7px -7px 23px #5c5c5c;
-}
-#bannerArt .art a:hover{
-	color : orange;
-	box-shadow : 1px 1px 1px 1px black;
-}
-#modalWindowSucess{
-	display : none;
-	background-color: rgb(43, 43, 43);
-	flex-wrap: wrap;
-	position : fixed;
-	top : 25%;
-	left : 33%;
+	box-shadow: 2px 2px 2px #252525, -2px -2px 2px #313131;
 }
 
-#modalWindowSucess img{
+#bannerArt .art h3 {
+	color: rgb(0, 118, 214);
+	text-align: center;
+}
+
+#bannerArt img {
 	display: block;
-	margin: auto;	
+	margin: auto;
 }
-#modalWindowSucess h2{
+
+#bannerArt .art p {
+	border-radius: 8px;
+	margin: 4% auto;
+	background-color: rgba(255, 255, 255, 0.6);
+	text-align: center;
+	width: 80%;
+}
+
+#bannerArt .btn_art {
+	display: flex;
+	justify-content: center;
+	margin: 4% 0;
+	padding: 2% 0;
+}
+
+#bannerArt .art a {
+	margin: auto;
+	text-align: center;
+	text-decoration: none;
+	color: rgb(0, 118, 214);
+	border-radius: 8px;
+	padding: 2%;
+	background: #2b2b2b;
+	box-shadow: inset 7px 7px 23px #181818, inset -7px -7px 23px #5c5c5c;
+}
+
+#bannerArt .art a:hover {
+	color: orange;
+	box-shadow: 1px 1px 1px 1px black;
+}
+
+#modalWindowSucess {
+	display: none;
+	background-color: rgb(43, 43, 43);
+	flex-wrap: wrap;
+	position: fixed;
+	top: 25%;
+	left: 33%;
+}
+
+#modalWindowSucess img {
+	display: block;
+	margin: auto;
+}
+
+#modalWindowSucess h2 {
 	margin: 2% auto;
-	font-size: 1.5em;	
-	color : rgb(0, 118, 214);
+	font-size: 1.5em;
+	color: rgb(0, 118, 214);
 }
-#modalWindowSucess h3{
-	text-align : center;
-	font-size: 1.5em;	
-	color : rgb(0, 118, 214);
+
+#modalWindowSucess h3 {
+	text-align: center;
+	font-size: 1.5em;
+	color: rgb(0, 118, 214);
 }
+
 #modalWindowSucess div div:last-child {
 	display: flex;
 }
-#modalWindowSucess a{
-	margin : auto;
-	text-decoration : none;
-	color : rgb(0, 118, 214);
-	font-size : 2em;
+
+#modalWindowSucess a {
+	margin: auto;
+	text-decoration: none;
+	color: rgb(0, 118, 214);
+	font-size: 2em;
 }
-#modalWindowSucess a:hover{
-	color : orange;	
+
+#modalWindowSucess a:hover {
+	color: orange;
 }
+
 #bannerForm {
 	margin: auto;
-	display : flex;
-	flex-wrap : wrap;
+	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 }
+
 #bannerForm h2 {
 	text-align: center;
 	color: rgb(0, 118, 214);
 }
+
 #bannerForm form {
-	border-radius : 20px;
+	border-radius: 20px;
 	margin: 10% auto;
 	background: #2b2b2b;
 }
+
 #bannerForm div {
-	display : flex;
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
-#bannerForm label{
-	text-align : center;
+
+#bannerForm label {
+	text-align: center;
 	color: rgb(0, 118, 214);
 	margin-bottom: 1%;
 }
+
 #bannerForm a {
 	text-align: center;
 	text-decoration: none;
 	color: rgb(0, 118, 214);
-	box-shadow: inset 7px 7px 23px #181818,
-                inset -7px -7px 23px #5c5c5c;
+	box-shadow: inset 7px 7px 23px #181818, inset -7px -7px 23px #5c5c5c;
 }
+
 #bannerForm a:hover {
-	box-shadow: inset 7px 7px 23px #333333,
-    			inset -7px -7px 23px #807f7f;
-    color: orange;
+	box-shadow: inset 7px 7px 23px #333333, inset -7px -7px 23px #807f7f;
+	color: orange;
 }
-#btn_submit{
-	margin : 2% 0;	
+
+#btn_submit {
+	margin: 2% 0;
 }
-#btn_submit button{
-	border : none;
+
+#btn_submit button {
+	border: none;
 	background-color: #2b2b2b;
 	color: rgb(0, 118, 214);
-	box-shadow: inset 7px 7px 23px #181818,
-                inset -7px -7px 23px #5c5c5c;
+	box-shadow: inset 7px 7px 23px #181818, inset -7px -7px 23px #5c5c5c;
 }
-#btn_submit button:hover{	
-	box-shadow: inset 7px 7px 23px #333333,
-    			inset -7px -7px 23px #807f7f;
-    color: orange;
+
+#btn_submit button:hover {
+	box-shadow: inset 7px 7px 23px #333333, inset -7px -7px 23px #807f7f;
+	color: orange;
 }
-#bannerForm .mdp{
-	margin :2% auto;
+
+#bannerForm .mdp {
+	margin: 2% auto;
+}
+
+#cart {
+	padding : 2%;
+	margin: 4% auto;
+	background-color: #2b2b2b;
+	border-radius: 12px;
+	background: linear-gradient(145deg, #272727, #2e2e2e);
+	box-shadow: 2px 2px 6px #1a1a1a, -2px -2px 6px #3c3c3c;
+}
+
+#cart table {
+	width: 80%;
+	margin: auto;
+	color: rgb(0, 118, 214);
+}
+
+#cart thead {
+	margin : 2% 0;
+	color: orange;
+	text-align : center;
+	font-size : 2em;
+	background: linear-gradient(145deg, #272727, #2e2e2e);
+	box-shadow: 2px 2px 6px #1a1a1a, -2px -2px 6px #3c3c3c;
+}
+
+#cart tbody td{
+	padding : 2%;
+}
+#cart tfoot tr td{
+	color: orange;
+	font-size : 2em;
 }
 
 @media screen and (min-width:980px) {
-	
-	#navBar nav{
-    display: flex;
+	#navBar nav {
+		display: flex;
 	}
-	#banner form{
-    display: flex;
+	#banner form {
+		display: flex;
 	}
 }

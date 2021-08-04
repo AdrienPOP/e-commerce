@@ -15,45 +15,66 @@ import com.ap_commerce.engine.repositories.ArticleRepository;
 public class Cart {
 
 	private int userId;
-	
+
 	private int idArticle;
 	
+	private double priceTotal;
+
 	@Autowired
 	private List<Article> articles;
-	
+
 	@Autowired
 	private ArticleRepository articleRepositoty;
-	
+
 	private HttpSession session;
 
 	public Cart() {
 		super();
 		this.articles = new ArrayList<Article>();
 	}
-	
+
 	public Cart updateSessionCart(HttpSession session) {
-		
-		if(session.getAttribute("cart") == null) {
+
+		if (session.getAttribute("cart") == null) {
 			this.setUserId(1);
-			session.setAttribute("cart", this);	
+			session.setAttribute("cart", this);
 		}
-		return (Cart)session.getAttribute("cart");
+		return (Cart) session.getAttribute("cart");
 	}
+
 	public void updateCart(Cart cart) {
 		this.userId = cart.userId;
 		this.articles = cart.articles;
-		
+
 	}
-	
+
 	public void addArticleInCard(int idArticle) {
 		ArticleRepository articleRepository = this.articleRepositoty;
 		Optional<Article> article = articleRepository.findById(idArticle);
-		
-		this.articles.add(article.get());
+		verifyIfArticleExist(article);
+	}
+
+	public void verifyIfArticleExist(Optional<Article> article) {
+		if (this.articles.isEmpty()) {
+			article.get().setQuantity(1);
+			this.articles.add(article.get());
+		} else {
+			for (Article a : articles) {
+				if (article.get().getId() == a.getId()) {
+					a.setQuantity(a.getQuantity() + 1);
+					return;
+				} 
+			}
+			article.get().setQuantity(1);
+			this.articles.add(article.get());
+		}
 	}
 	
-	
-	// Getters and Setters : 
+	public void calculateTotalPriceByArticle() {
+		
+	}
+
+	// Getters and Setters :
 
 	public int getUserId() {
 		return userId;
@@ -101,13 +122,12 @@ public class Cart {
 		return "Cart [articles=" + articles + "]";
 	}
 
-	
+	public double getPriceTotal() {
+		return priceTotal;
+	}
 
-	
-	
-	
-	
-	
-	
-	
+	public void setPriceTotal(double priceTotal) {
+		this.priceTotal = priceTotal;
+	}
+
 }

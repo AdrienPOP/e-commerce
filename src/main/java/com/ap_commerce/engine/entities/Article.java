@@ -7,9 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.Transient;
 
 import org.springframework.stereotype.Component;
 
@@ -26,6 +24,9 @@ public class Article {
 	private String description;
 	@Column
 	private double price;
+	@Column
+	
+	private int quantity;
 		
 	@ManyToOne(targetEntity=Category.class)
 	private Category category;
@@ -78,6 +79,14 @@ public class Article {
 
 	public void setCategory(Category category) {
 		this.category = category;
+	}
+	
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 	@Override

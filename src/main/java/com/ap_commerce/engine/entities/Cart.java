@@ -59,7 +59,7 @@ public class Cart {
 			article.get().setQuantity(1);
 			this.articles.add(article.get());
 		} else {
-			for (Article a : articles) {
+			for (Article a : this.articles) {
 				if (article.get().getId() == a.getId()) {
 					a.setQuantity(a.getQuantity() + 1);
 					return;
@@ -70,8 +70,20 @@ public class Cart {
 		}
 	}
 	
-	public void calculateTotalPriceByArticle() {
-		
+	public double calculateTotalPriceByArticle() {
+		this.priceTotal = 0.0;
+		for (Article a : this.articles) {
+				this.priceTotal += a.getPrice() * a.getQuantity();
+			} 
+		return priceTotal;
+	}
+	
+	
+	public void modifyQuantityOnArticle(int idArticle, int quantity) {
+		for (Article a : this.articles) {
+			if (idArticle == a.getId())
+				a.setQuantity(quantity);
+		}
 	}
 
 	// Getters and Setters :
@@ -99,6 +111,7 @@ public class Cart {
 	public void setSession(HttpSession session) {
 		this.session = session;
 		this.updateCart(updateSessionCart(this.session));
+		this.calculateTotalPriceByArticle();
 	}
 
 	public ArticleRepository getArticleRepositoty() {

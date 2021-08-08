@@ -25,6 +25,7 @@ public class CartController {
 		
 		cart.setSession(session);
 		model.addAttribute("articles", cart.getArticles());
+		model.addAttribute("priceTotal", cart.getPriceTotal());
 		return "cart";
 	}
 

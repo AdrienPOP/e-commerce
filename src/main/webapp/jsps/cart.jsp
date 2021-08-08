@@ -34,22 +34,26 @@
 					<c:forEach items="${articles}" var="article">
 						<tr>
 							<td>${article.name}</td>
-							<td>${article.quantity}</td>
-							<td>${article.price}</td>
-							<td>${article.price *article.quantity}</td>
+							<td class="col-3"><form class="col-5" action=""><input class="col-10 quantity" type="number" value="${article.quantity}"></form>
+							<td>${article.price}€</td>
+							<td>${article.price *article.quantity}€</td>
 						</tr>
 					</c:forEach>
 				</tbody>
 				<tfoot>
 					<tr>
 						<td colspan="3">Total à payer</td>
-						<td></td>
+						<td>${priceTotal}€</td>
 					</tr>
 				</tfoot>
 			</table>
+			
 		</div>
 	</div>
 </body>
 <script type="text/javascript"
 	src="${pageContext.request.contextPath}/js/script.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/js/modifyArticleOnCart.js"></script>
+
 </html>

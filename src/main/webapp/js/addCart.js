@@ -41,14 +41,14 @@ let openModalWindowSuccess = (jsonString) => {
 	document.getElementById("modalWindowSucess").style.display="flex";
 	document.getElementById("articleAddInCart").innerHTML = html;
 	closeModalWindowSuccess();
-}
+};
 
 function closeModalWindowSuccess(){
 	let btnClose = document.getElementById("btnClose");
 	btnClose.addEventListener("click", (e) => {
 		document.getElementById("modalWindowSucess").style.display="none";
 	});
-}
+};
 
 function clickToCart(){
 	let arts = document.getElementsByClassName("addArtOnCarts");
@@ -59,11 +59,7 @@ function clickToCart(){
 			sendRequest("GET", "addArticleOnCart?idArticle=" + art.search.substring(1), openModalWindowSuccess);  
 		})
 	}
-}
-
-function test() {
-	console.log("test  réussi");
-}
+};
 
 clickToCart();
 

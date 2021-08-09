@@ -16,7 +16,7 @@
 <body>
 	<%@ include file="header.jsp"%>
 		<div id="bannerForm" class="col-8">
-			<form:form servletRelativeAction="/addCategory"
+			<form:form servletRelativeAction="/addNewCategory"
 				modelAttribute="category" acceptCharset="utf-8" class="col-8">
 				<h2>Ajoutez une catégorie</h2>
 				<div>

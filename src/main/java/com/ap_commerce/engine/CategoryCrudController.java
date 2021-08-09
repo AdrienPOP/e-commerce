@@ -15,12 +15,12 @@ public class CategoryCrudController {
 	@Autowired
 	private CategoryRepository categorieRepository;
 
-		@GetMapping("/addCategory")
+		@GetMapping("/addNewCategory")
 		public String showFormCategory(@ModelAttribute Category cat) {
 			return "addCategory";
 		}
 		
-		@PostMapping("/addCategory")
+		@PostMapping("/addNewCategory")
 		public String addNewCategory(@ModelAttribute Category cat) {
 			categorieRepository.save(cat);
 			return "addCategory";

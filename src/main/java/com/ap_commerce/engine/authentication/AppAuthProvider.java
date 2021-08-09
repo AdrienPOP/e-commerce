@@ -7,11 +7,14 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 public class AppAuthProvider extends DaoAuthenticationProvider {
 	
 	@Autowired
 	UserService userDetailsService;
+	@Autowired
+	PasswordEncoder passwordEncoder;
 
 	   @Override
 	    public Authentication authenticate(Authentication authentication) throws AuthenticationException {
@@ -19,11 +22,11 @@ public class AppAuthProvider extends DaoAuthenticationProvider {
 	        UsernamePasswordAuthenticationToken auth = (UsernamePasswordAuthenticationToken) authentication;
 
 	        String name = auth.getName();
-	        //String password = auth.getCredentials().toString();
+	        String rawPassword = auth.getCredentials().toString();
 
 	        UserDetails user = userDetailsService.loadUserByUsername(name);
 
-	        if (user == null) {
+	        if (user == null || !checkPassword(rawPassword, user.getPassword())) {
 	            throw new BadCredentialsException("Username/Password does not match for " + auth.getPrincipal());
 	        }
 
@@ -35,6 +38,10 @@ public class AppAuthProvider extends DaoAuthenticationProvider {
 	    public boolean supports(Class<?> authentication) {
 	        return true;
 
+	    }
+	    
+	    private boolean checkPassword(String rawPassword, String hash) {
+	    	return passwordEncoder.matches(rawPassword, hash);
 	    }
 	
 	

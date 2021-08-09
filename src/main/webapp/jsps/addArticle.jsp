@@ -34,6 +34,10 @@
 					<form:options items="${categories}" itemValue="id" itemLabel="name"></form:options>
 				</form:select>
 			</div>
+			<div>
+				<label for="price" class="col-12">Description</label>
+				<form:input path="price"></form:input>
+			</div>
 
 			<div id="btn_submit" class="col-12">
 				<button class="col-6" type="submit">Ajouter un article</button>

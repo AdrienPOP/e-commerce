@@ -36,10 +36,13 @@ function clickToModify(){
 	let quantities = document.getElementsByClassName("quantity");
 	
 	
+	
 	for (let quantity of quantities){
 		quantity.addEventListener("change", (e) => {
-			console.log("test"); 
-			sendRequest("GET", "modifyQuantity?idArticle=2&quantity=" )
+			console.log(quantity.nextElementSibling.value);
+			console.log(quantity.value);
+			
+			/*sendRequest("GET", "modifyQuantity?idArticle=2&quantity=" )*/
 		})
 	}
 };

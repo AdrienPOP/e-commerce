@@ -1,4 +1,4 @@
-package com.ap_commerce.engine.authentication.exceptions;
+package com.ap_commerce.engine.authentication;
 
 import java.util.Optional;
 
@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.ap_commerce.engine.authentication.exceptions.UserAlreadyExistException;
 import com.ap_commerce.engine.entities.User;
 import com.ap_commerce.engine.repositories.UserRepository;
 

@@ -34,7 +34,7 @@
 					<c:forEach items="${articles}" var="article">
 						<tr>
 							<td>${article.name}</td>
-							<td class="col-3"><form class="col-5" action=""><input class="col-10 quantity" type="number" value="${article.quantity}"></form>
+							<td class="col-3"><form class="col-5" action=""><input class="col-10 quantity" type="number" value="${article.quantity}"><input type="hidden" class="idArticle" value="${article.id}"></input></form>
 							<td>${article.price}€</td>
 							<td>${article.price *article.quantity}€</td>
 						</tr>

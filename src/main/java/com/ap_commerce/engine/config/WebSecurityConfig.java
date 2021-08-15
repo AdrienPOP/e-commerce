@@ -30,8 +30,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 			.authorizeRequests()
-				.antMatchers(HttpMethod.GET, "/", "/home", "/category", "/allCategory", "/Cart", "/addArticleOnCart", "/register", "/logout	").permitAll()
-				.antMatchers(HttpMethod.POST, "/login", "/registerUser").permitAll()
+				.antMatchers(HttpMethod.GET, "/", "/home", "/category", "/allCategory", "/Cart", "/addArticleOnCart", "/register", "/logout", "/forgotPassword").permitAll()
+				.antMatchers(HttpMethod.POST, "/login", "/registerUser", "/forgotPassword").permitAll()
 				.antMatchers("/css/*", "/js/**", "/ressources/*").permitAll()
 //				.antMatchers("/account").hasRole("USER")
 //				.antMatchers(HttpMethod.GET, "/addCategory", "/addArticle").hasRole("ADMIN")

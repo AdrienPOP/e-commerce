@@ -30,9 +30,5 @@ public class LoginController {
 		model.addAttribute("categories",categories);
 		return "register";
 	}
-	
-//	@GetMapping("/logout")
-//	public String logout() {
-//		return "home";
-//	}
+
 }

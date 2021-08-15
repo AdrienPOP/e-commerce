@@ -11,7 +11,7 @@
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
-<title>Ap-Shop</title>
+<title>Ap-Shop : Ajouter une catégorie</title>
 </head>
 <body>
 	<%@ include file="header.jsp"%>
